@@ -20,14 +20,13 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include("debug_toolbar.urls")),
+    path('', include('appexamen.urls')),
     
 ]
 
-"""
-DESCOMENTAR LOS ERRORES
+# ERRORES
 from django.conf.urls import handler404, handler400, handler403, handler500
-handler404 = "camping.views.mi_error_404"
-handler400 = "camping.views.mi_error_400"
-handler403 = "camping.views.mi_error_403"
-handler500 = "camping.views.mi_error_500"
-"""
+handler404 = "appexamen.views.mi_error_404"
+handler400 = "appexamen.views.mi_error_400"
+handler403 = "appexamen.views.mi_error_403"
+handler500 = "appexamen.views.mi_error_500"

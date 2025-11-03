@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0kdq!zp0$&z*#6fgk&x$z0kd(3o*z6ra1sp1-slx7cw&4jo8nz
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'pythonanywhere.com', '0.0.0.0']
-
+INTERNAL_IPS = ["127.0.0.1"]
 
 # Application definition
 
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'django_seed',
-    #'CAMBIAR POR EL NOMBRE DE LA APP',
+    'appexamen',
 ]
 
 MIDDLEWARE = [
