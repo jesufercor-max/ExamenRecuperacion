@@ -1,7 +1,7 @@
 from django.contrib import admin
-# from .models import 
+# QUitar hastag from .models import "meter nombre de los modelos " 
 
 
 # Register your models here.
 
-#admin.site.register()
+# QUitar hastag admin.site.register("lo que ponga arriba")
