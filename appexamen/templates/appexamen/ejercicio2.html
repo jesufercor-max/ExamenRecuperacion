@@ -1,0 +1,8 @@
+{% for animal in ejercicio2_resultados %}
+  
+    <p>Nombre del animal: {{ animal.nombre }}</p>
+    <p>Nombre del refugio: {{ animal.centro.refugio.nombre }}</p>
+
+{% empty %}
+    <p>No se encontraron resultados para el Ejercicio 1.</p>
+{% endfor %}

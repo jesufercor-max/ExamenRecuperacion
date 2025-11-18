@@ -14,6 +14,10 @@ def Ejercicio1(request, animal_contiene, refugio_contiene):
     queryset_ej1 = Animal.objects.select_related('centro').filter(nombre__contains=animal_contiene, centro__refugio__nombre__contains=refugio_contiene)
     return render(request, 'appexamen/ejercicio1.html', {"ejercicio1_resultados":queryset_ej1})
 
+def Ejercicio2(request, vacuna_fabricante, vacuna_nombre, puntuacion):
+    queryset_ej2 = Animal.objects.select_related('centro').filter(vacuna__fabricante__contains=vacuna_fabricante)Q(vacuna__nombre__contains=vacuna_nombre).filter(revision__veterinaria__puntuacion__salud__gt=80) 
+    return render(request, 'appexamen/ejercicio2.html', {"ejercicio2_resultados":queryset_ej2})
+
 
 
 #   PÁGINAS DE ERRORES
