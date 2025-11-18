@@ -1,7 +1,16 @@
 from django.contrib import admin
-# QUitar hastag from .models import "meter nombre de los modelos " 
-
+from .models import Refugio, Centro, Animal, Vacuna, Animal_vacunas, Revision_veterinaria 
 
 # Register your models here.
 
-# QUitar hastag admin.site.register("lo que ponga arriba")
+admin.site.register(Refugio)
+
+admin.site.register(Centro)
+
+admin.site.register(Animal)
+
+admin.site.register(Vacuna)
+
+admin.site.register(Animal_vacunas)
+
+admin.site.register(Revision_veterinaria)

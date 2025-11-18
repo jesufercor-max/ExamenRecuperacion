@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import *
+from .models import Animal, Refugio, Centro, Vacuna, Animal_vacunas, Revision_veterinaria
 from django.db.models import Avg, Max, Min, Q, Prefetch
 from django.views.defaults import page_not_found
 
@@ -9,10 +9,11 @@ from django.views.defaults import page_not_found
 
 def index(request):
     return render(request, 'index.html') 
-"""
-def (request):
-    return render(request, '', {''})
-"""
+
+def Ejercicio1(request, animal_contiene, refugio_contiene):
+    queryset_ej1 = Animal.objects.select_related('centro').filter(nombre__contains=animal_contiene, centro__refugio__nombre__contains=refugio_contiene)
+    return render(request, 'appexamen/ejercicio1.html', {"ejercicio1_resultados":queryset_ej1})
+
 
 
 #   PÁGINAS DE ERRORES
